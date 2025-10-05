@@ -24,3 +24,8 @@ def cropland2_page():
 @app.route('/why')
 def why_page():
     return render_template('why.html',why_page="/why.html")
+
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
