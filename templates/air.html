@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>25 Years of Earth Through Terra's Eyes</title>
+<style>
+body {
+  margin:0; padding:0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #000;
+  color:white;
+  overflow-x:hidden;
+  position:relative;
+}
+
+/* Solar System Background */
+.solar-system {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+.sun {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #ffdd33 0%, #ffaa00 80%);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 40px #ffdd33;
+}
+.orbit {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  animation: spin linear infinite;
+}
+.orbit1 { width: 80px; height: 80px; animation-duration: 6s; }
+.orbit2 { width: 120px; height: 120px; animation-duration: 10s; }
+.orbit3 { width: 160px; height: 160px; animation-duration: 14s; }
+.orbit4 { width: 200px; height: 200px; animation-duration: 20s; }
+.orbit5 { width: 280px; height: 280px; animation-duration: 40s; }
+.orbit6 { width: 340px; height: 340px; animation-duration: 50s; }
+.orbit7 { width: 400px; height: 400px; animation-duration: 60s; }
+.orbit8 { width: 460px; height: 460px; animation-duration: 70s; }
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg);}
+  100% { transform: translate(-50%, -50%) rotate(360deg);}
+}
+.orbit .planet {
+  position: absolute;
+  top:50%;
+  left:0;
+  transform: translate(-50%,-50%);
+  border-radius:50%;
+  box-shadow:0 0 6px rgba(255,255,255,0.3);
+}
+.planet1 { width:8px; height:8px; background: radial-gradient(circle at 30% 30%, #b0b0b0, #666); }
+.planet2 { width:14px; height:14px; background: radial-gradient(circle at 30% 30%, #f5deb3, #b38b5b); }
+.planet3 { width:16px; height:16px; background: radial-gradient(circle at 30% 30%, #3399ff, #0044aa); }
+.planet4 { width:12px; height:12px; background: radial-gradient(circle at 30% 30%, #ff6a33, #aa2200); }
+.planet5 { width:28px; height:28px; background: radial-gradient(circle at 30% 30%, #ffdd99, #aa7744); }
+.planet6 { width:24px; height:24px; background: radial-gradient(circle at 30% 30%, #ffeecc, #aa9955); }
+.planet7 { width:18px; height:18px; background: radial-gradient(circle at 30% 30%, #66ccff, #336699); }
+.planet8 { width:18px; height:18px; background: radial-gradient(circle at 30% 30%, #3366ff, #001155); }
+
+/* Container & Boxes */
+.container{display:flex;flex-direction:column;align-items:center;padding:40px 20px;gap:30px;position:relative;z-index:1;}
+.box{
+  background: rgba(20,20,30,0.85);
+  border-radius:25px;
+  padding:30px;
+  max-width:900px;
+  text-align:left;
+  box-shadow:0 0 20px rgba(0,255,255,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position:relative;
+  cursor:pointer;
+}
+.box:hover{
+  transform:scale(1.03);
+  box-shadow:0 0 40px rgba(0,255,255,0.5);
+}
+
+/* Headings */
+h1.shining{
+  font-size:2.5rem;
+  background: linear-gradient(90deg,#33ccff,#ff66ff,#ffcc33);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.box p{
+  font-size:1.1rem;
+  line-height:1.5;
+  color:white;
+  margin-top:10px;
+}
+
+/* Highlight Years & 'Why it matters:' label only after click */
+.year.active, .why-it-matters.active {
+  color:red;
+  font-weight:bold;
+}
+
+/* Video Box - bigger size */
+.video-box video{
+  width:100%;
+  height:500px;
+  border-radius:15px;
+  margin-top:15px;
+}
+
+/* Navigation Buttons - bigger size */
+.navigation{
+  display:flex;
+  justify-content:space-between;
+  width:900px;
+  max-width:95%;
+  margin:30px auto;
+}
+.navigation button{
+  background:#00ccff;color:#000;border:none;padding:18px 30px;font-size:1.3rem;font-weight:bold;border-radius:15px;cursor:pointer;
+  box-shadow:0 0 15px #00ccff;
+}
+.navigation button:hover{
+  background:#ff66ff;
+  box-shadow:0 0 25px #ff66ff;
+  transform:scale(1.05);
+}
+</style>
+</head>
+<body>
+
+<!-- Solar System Background -->
+<div class="solar-system">
+  <div class="sun"></div>
+  <div class="orbit orbit1"><div class="planet planet1"></div></div>
+  <div class="orbit orbit2"><div class="planet planet2"></div></div>
+  <div class="orbit orbit3"><div class="planet planet3"></div></div>
+  <div class="orbit orbit4"><div class="planet planet4"></div></div>
+  <div class="orbit orbit5"><div class="planet planet5"></div></div>
+  <div class="orbit orbit6"><div class="planet planet6"></div></div>
+  <div class="orbit orbit7"><div class="planet planet7"></div></div>
+  <div class="orbit orbit8"><div class="planet planet8"></div></div>
+</div>
+
+<div class="container">
+
+  <!-- Heading & Tagline -->
+  <div class="box">
+    <h1 class="shining">25 Years of Earth Through Terra's Eyes</h1>
+    <p style="font-size:1.2rem; color:white; margin-top:10px;">
+      Beyond the Smog Curtain:<br>
+      Terra's eyes saw pollution transform from city haze to continental smoke.
+    </p>
+  </div>
+
+  <!-- Animation / Video Box -->
+  <div class="box video-box">
+    <h1 class="shining">Solar System Animation</h1>
+    <video controls>
+      <source src="/static/video/Atmosphere.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- 25-Year Journey Summary -->
+  <div class="box">
+    <h1 class="shining">25-Year Journey Summary</h1>
+    <p>
+      The Terra satellite, operating as a Global Air Detective from 2000 to 2025, used instruments like MOPITT to track Carbon Monoxide (CO) and MODIS to map aerosols and fires, delivering a crucial 25-year summary of Earth's breathable atmosphere. This unprecedented record confirmed a complex dual trend: the triumph of global environmental policy battling the rising fury of climate-driven disasters.<br><br>
+      This success in curbing chronic pollution was demonstrated through several key observations:<br>
+      - The definitive, long-term decline in global CO levels, confirming the effectiveness of clean air regulations.<br>
+      - Significant air quality improvements in industrial powerhouses like the United States, Europe, and China, due to strict vehicle and industrial emission standards.<br>
+      - A temporary but measurable dip in CO during the 2008–2009 economic recession, showcasing the direct link between global economic activity and pollution output.<br><br>
+      Conversely, the same dataset tracked numerous, escalating pollution spikes from massive wildfires, proving that while chronic, low-level pollution from cities was decreasing, acute, high-intensity smoke plumes were becoming the dominant threat. The MODIS instrument, for example, accurately mapped the long-range transport of smoke and fine aerosols, revealing the global reach of these combustion events.<br><br>
+      Specific examples of severe, climate-driven events that punctuated the positive trend include:<br>
+      - The large CO plumes from the unusually severe 2002–2003 Russian boreal fires.<br>
+      - The record-breaking emissions from the 2019–2020 Australian Black Summer bushfires.<br>
+      - The extensive, cross-continental smoke transport from the 2023 Canadian wildfires, which carried health-threatening pollutants across North America and over the Atlantic.<br><br>
+      In essence, Terra’s "eyes" documented a shift in the air quality risk: the health threat is moving from chronic smog in cities to severe, episodic smoke events in remote regions, which then get transported globally. This means environmental policy must now focus on managing the long-range health and ecosystem impacts of these escalating, climate-driven natural disasters, a critical challenge documented until the MOPITT mission concluded in April 2025.
+    </p>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="navigation">
+    <button><a href="{{ url_for('home_page') }}">Back</a></button>
+    <button><a href="{{ url_for('air2_page') }}">Next</a></button>
+  </div>
+
+</div>
+
+<script>
+// On clicking any box, add red highlight to years and 'Why it matters' label
+document.querySelectorAll('.box').forEach(box => {
+  box.addEventListener('click', () => {
+    box.querySelectorAll('.year, .why-it-matters').forEach(el => {
+      el.classList.add('active');
+    });
+  });
+});
+</script>
+
+</body>
+</html>

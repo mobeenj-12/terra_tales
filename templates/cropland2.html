@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>A Quarter Century on Earth: 2000 vs 2025</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #000;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Title with RGB gradient color */
+h1.page-title {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  background: linear-gradient(90deg, rgb(255,0,0), rgb(0,255,0), rgb(0,0,255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Container for images */
+.image-comparison {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  position: relative;
+  border-top: 2px solid #555;
+  border-bottom: 2px solid #555;
+  overflow: hidden;
+}
+
+/* Left and Right images */
+.image-comparison .left, .image-comparison .right {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-comparison img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay titles on images */
+.image-comparison .left::before,
+.image-comparison .right::before {
+  content: attr(data-title);
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 0 5px #000;
+  pointer-events: none;
+}
+
+/* Divider line */
+.divider {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #555;
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+
+/* Content text below images */
+.content {
+  max-width: 900px;
+  margin: 30px auto;
+  font-size: 16px;
+  line-height: 1.6;
+  color: white;
+  padding: 0 20px;
+}
+
+.back-button {
+  display: inline-block;
+  margin: 30px 20px;
+  padding: 10px 20px;
+  background: #222;
+  color: white;
+  border: 1px solid #666;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.back-button:hover { background: #444; }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">Global Croplands - Then vs Now</h1>
+
+<div class="image-comparison">
+  <div class="left" data-title="Global Croplands 2000">
+    <img src="/static/image/crop2000.jpg" alt="global croplands 2000">
+  </div>
+  <div class="right" data-title="Global Croplands 2025">
+    <img src="/static/image/crop2025.jpg" alt="global croplands 2025">
+  </div>
+  <div class="divider"></div>
+</div>
+
+<div class="content">
+    <p><H2>🌾 What You Can Do</H2><br>
+
+For twenty-five years, Terra has watched our croplands pulse with life — seasons shifting, soil drying, green fading, and returning again. Each change from space is more than data — it’s a reflection of our hands, our habits, and our hunger.<br>
+
+Now, the lens turns toward us.<br>
+
+🌱 Choose food that gives back — support farming that nourishes the land, not exhausts it.<br>
+
+🥦 Cut down on food waste. Nearly one-third of all food produced never gets eaten — yet it takes land, water, and energy to grow.<br><br>
+
+
+💡 Think climate in every choice — from the power we use to the food we buy, it all loops back to the same ground.The less strain we put on the planet, the stronger our farmlands remain.<br>
+
+🗣 Share the story Terra tells — awareness grows faster than crops when people understand what’s at stake.<br><br>
+
+
+Terra’s satellites can see the changes. We’re the ones who can shape them.
+Because keeping Earth’s fields alive means keeping our own future alive, too.</p>
+</div>
+
+<button class="back-button" onclick="window.history.back()">Back</button>
+
+</body>
+</html>
