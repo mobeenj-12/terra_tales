@@ -11,7 +11,7 @@ This is a simple Flask-based web application.
 
 1. **Clone the repository**
 
-```bash
+
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
 Create and activate a virtual environment (optional but recommended)
@@ -29,7 +29,7 @@ Run the application
 
 bash
 Copy code
-python app.py
+python main.py
 The app will be available at: http://localhost:5000
 
 Notes
