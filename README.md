@@ -24,7 +24,7 @@ Install dependencies
 
 bash
 Copy code
-pip install -r requirements.txt
+pip install flask
 Run the application
 
 bash
